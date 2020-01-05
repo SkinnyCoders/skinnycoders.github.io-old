@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+.hidden {
+  opacity:0;
+}
+.console-container {
+  font-family:Khula;
+  font-size:5em;
+  text-align:center;
+  height:200px;
+  width:920px;
+  display:block;
+  position:absolute;
+  color:white;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
+  @media screen and (max-width: 640px) {
+    .console-container {
+      font-family:Khula;
+      font-size:2.5em;
+      text-align:center;
+      height:0vh;
+      width:100%;
+      display:block;
+      position:absolute;
+      color:white;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      margin:auto;
+}
+
+
+#aa_particles
+{
+    z-index: 4;
+
+    height: 100%;
+    height: 100vh;
+
+    background: $c1;
+}
+
+canvas
+{
+    display: block;
+
+    vertical-align: bottom;
+  }
+
+
+  }
