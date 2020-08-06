@@ -22,37 +22,38 @@
 
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet"> 
 
 <style>
-    .btn-light2 {
+.btn-light2 {
+  color: #fff;
+  background-color: #25D366;
+  border-color: #25D366;
+}
+
+.btn-light2:hover {
+  color: #fff;
+  background-color: #22c25e;
+  border-color: #22c25e;
+}
+
+.img-tools{
+	height: 150px;
+
+}
+
+@media screen and (max-width: 600px) {
+  .btn-light2 {
       color: #fff;
       background-color: #25D366;
       border-color: #25D366;
+      margin-top:20px;
     }
+}
 
-    .btn-light2:hover {
-      color: #fff;
-      background-color: #22c25e;
-      border-color: #22c25e;
-    }
-
-    .img-tools{
-    	height: 150px;
-
-    }
-    
-    @media screen and (max-width: 600px) {
-      .btn-light2 {
-          color: #fff;
-          background-color: #25D366;
-          border-color: #25D366;
-          margin-top:20px;
-        }
-    }
-
-            .carousel {
-  margin: 50px auto;
-  padding: 0 70px;
+        .carousel {
+margin: 50px auto;
+padding: 0 40px;
 }
 .carousel .item {
   color: #999;
@@ -61,8 +62,8 @@
   font-size: 13px;
 }
 .carousel .media img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   display: block;
   border-radius: 50%;
 }
@@ -102,13 +103,66 @@
     background: #1c47e3;    
     border: 5px double;    
 }
+
+.skill{
+  margin-bottom: 15px;
+}
+
+.text-skill{
+  font-size: 25px;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: left !important;
+}
+
+.timeline a{
+  font-size: 18px;
+}
+
+.timeline p{
+  font-size: 15px;
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+.checked {
+  color: orange;
+}
 </style>
 </head>
 
 <body id="page-top">
 
   <!-- Navigation -->
-  <!-- <a class="menu-toggle rounded" href="#">
+  <a class="menu-toggle rounded" href="#">
     <i class="fas fa-bars"></i>
   </a>
   <nav id="sidebar-wrapper">
@@ -126,13 +180,19 @@
         <a class="js-scroll-trigger" href="#services">My Work</a>
       </li>
       <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#skill">Skill</a>
+      </li>
+      <li class="sidebar-nav-item">
         <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
       </li>
       <li class="sidebar-nav-item">
         <a class="js-scroll-trigger" href="#contact">Contact</a>
       </li>
+       <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#testimonial">Testimonies</a>
+      </li>
     </ul>
-  </nav> -->
+  </nav>
 
   <!-- Header -->
   <header class="masthead d-flex">
@@ -152,12 +212,12 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-md-3">
-          <img src="img/profile.jpg" alt="profile" class="img-profile">
-          <a href="https://www.instagram.com/rzkrsnt"><p class="instagram-link"></i> <b>@rzkrsnt</b></p></a>
+          <img src="https://nespetan.sirv.com/1111.jpg" alt="profile" class="img-profile">
+         <!--  <a href="https://www.instagram.com/rzkrsnt"><p class="instagram-link"></i> <b>@rzkrsnt</b></p></a> -->
         </div>
         <div class="col-md-9">
-          <h2>About Me!</h2>
-          <p class="lead mb-5">Hy... I’m fulltime muslim and a student majoring in information systems, I’m very fond of technology, good personality and can work with a team, My hoby is <span> <i class="icon-game-controller"></i> And read a <i class="icon-book-open"></i></span>, and I’m indonesian. For my project Check 
+          <h2>About Me</h2>
+          <p class="lead mb-5" style="font-size: 22px;">Hy... I’m fulltime muslim and a student majoring in information systems, I’m very fond of technology, good personality and can work with a team, My hoby is <span> <i class="icon-game-controller"></i> And read a <i class="icon-book-open"></i></span>, and I’m indonesian. For my project Check 
             <a href="https://github.com/SkinnyCoders/">My Github</a>!</p>
     <!--       <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What I Do</a> -->
         </div>
@@ -214,132 +274,185 @@
     </div>
   </section>
 
-<!-- 
-  <section class="content-section text-center" id="portfolio">
+
+  <section class="content-section" id="skill">
     <div class="container">
       <div class="content-section-heading text-center">
-        <h3 class="text-secondary mb-0">My Tools</h3>
+        <h3 class="text-secondary mb-0">What's I love To Do</h3>
+        <h2 class="mb-5">My Skill</h2>
         
-        <h2 class="mb-5">What's I Use For Work</h2>
+    <!--     <h2 class="mb-5">What's I Use For Work</h2> -->
       </div>
       <div class="row">
-        
-         <div class="col-lg-2 col-md-2 mb-5 mb-lg-0">
-          <img src="img/vsc-logo.png" class="img-tools img-fluid" >
+        <div class="col-md-3">
+          <canvas id="myChart" width="200" height="200"></canvas>
         </div>
-        <div class="col-lg-2 col-md-2 mb-5 mb-lg-0">
-          <img src="img/php-elephant.png" class="img-tools img-fluid" >
+        <div class="col-md-3">
+          <canvas id="chart_js" width="200" height="200"></canvas>
         </div>
-         <div class="col-lg-2 col-md-2 mb-5 mb-lg-0">
-          <img src="img/codeigniter.svg" class="img-tools img-fluid" >
+        <div class="col-md-3">
+          <canvas id="chart_ci" width="200" height="200"></canvas>
         </div>
-         <div class="col-lg-2 col-md-2 mb-5 mb-lg-0">
-          <img src="img/JavaScript-logo.png" class="img-tools img-fluid" >
+        <div class="col-md-3">
+          <canvas id="chart_sql" width="200" height="200"></canvas>
         </div>
-        <div class="col-lg-2 col-md-2 mb-5 mb-lg-0">
-          <img src="img/Ubuntu_Kylin_logo.png" class="img-tools img-fluid" >
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-3 offset-md-3">
+          <canvas id="chart_py" width="200" height="200"></canvas>
         </div>
-		<div class="col-lg-2 col-md-2 mb-5 mb-lg-0">
-          <img src="img/docker_facebook_share.png" class="img-tools img-fluid" >
+        <div class="col-md-3">
+          <canvas id="chart_go" width="200" height="200"></canvas>
         </div>
-    </div>
-    <div class="row mt-5">
-        <div class="col-lg-2 col-md-2 offset-md-2 mb-5 mb-lg-0">
-          <img src="img/mysql.svg" class="img-tools img-fluid" >
+       <!--  <div class="col-md-3">
+          <canvas id="chart_js" width="200" height="200"></canvas>
         </div>
-        <div class="col-lg-2 col-md-2 mb-5 mb-lg-0">
-          <img src="img/mongodb.png" class="img-tools img-fluid" >
+        <div class="col-md-3">
+          <canvas id="chart_ci" width="200" height="200"></canvas>
         </div>
-        <div class="col-lg-2 col-md-2 mb-5 mb-lg-0">
-          <img src="img/bootstrap.jpg" class="img-tools img-fluid" >
-        </div>
-        <div class="col-lg-2 col-md-2 mb-5 mb-lg-0">
-          <img src="img/Vue.png" class="img-tools img-fluid" >
-        </div>
-    </div>
+        <div class="col-md-3">
+          <canvas id="chart_sql" width="200" height="200"></canvas>
+        </div> -->
+      </div>
   	</div>
-</section> -->
+</section>
+
+<section id="Journey" class="content-section">
+    <div class="content-section-heading text-center">
+      <h2 class="mb-4">My Journey <i class="icon-trophy "></i> </h2>
+     <!--  <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a> -->
+     <!--  https://santren.idweb.host:2083/cpsess6836326707/download?skipencode=1&file=%2fhome%2fsicom%2fpublic_html%2fportfoliogua%2fCV%20-%20Rizki%20Ristanto.pdf -->
+    </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+      <h4>Latest Experiences</h4>
+      <ul class="timeline">
+        <li>
+          <a target="_blank" href="">Join Imersa.co.id as Web Developers</a>
+          <a href="#" class="float-right">July, 2019 - Until Now</a>
+          <p>This is not my first job as web developer, before joined imersa I was a wordpress developer @ media for bisnis. in this start-up I'm learning a lot. have a familly and full of joy.</p>
+        </li>
+        <li>
+          <a href="#">Done With My College</a>
+          <a href="#" class="float-right">February, 2020</a>
+          <p>after struggling with my thesis I finally graduated from campus. thank you to friends and all who have helped me through the days of college</p>
+        </li>
+        <li>
+          <a href="#">College @ University Technology Of Yogyakarta</a>
+          <a href="#" class="float-right">August, 2016</a>
+          <p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </section>
 
   <!-- Portfolio -->
-  <!-- <section class="content-section bg-primary text-white" id="portfolio">
+  <section class="content-section bg-primary" id="portfolio">
     <div class="container">
       <div class="content-section-heading text-center">
         <h3 class="text-secondary mb-0">Portfolio</h3>
         
-        <h2 class="mb-5">Recent Projects</h2>
+        <h2 class="mb-5 text-white">Recent Projects</h2>
       </div>
       <div class="row no-gutters">
-        <div class="col-lg-6">
-          <a class="portfolio-item" href="http://smith.si-16.com">
-            <span class="caption">
-              <span class="caption-content">
-                <h2>SMITH.id</h2>
-                <p class="mb-0">Sebuah website e-commerce untuk fashion</p>
-              </span>
-            </span>
-            <img class="img-fluid" src="img/portfolio/smith.png" alt="">
-          </a>
-        </div>
-        <div class="col-lg-6">
-          <a class="portfolio-item" href="http://fsitravel.co.id">
-            <span class="caption">
-              <span class="caption-content">
-                <h2>FSI TRAVEL</h2>
-                <p class="mb-0">Sebuah Website Travel umroh</p>
-              </span>
-            </span>
-            <img class="img-fluid" src="img/fsi.png" alt="">
-          </a>
-        </div>
-        <div class="col-lg-6">
-          <a class="portfolio-item" href="http://kiamori.co.id">
-            <span class="caption">
-              <span class="caption-content">
-                <h2>Kiamori</h2>
-                <p class="mb-0">Sebuah website Company Profile</p>
-              </span>
-            </span>
-            <img class="img-fluid" src="img/portfolio/kiamori.png" alt="">
-          </a>
-        </div>
-        <div class="col-lg-6">
-          <a class="portfolio-item" href="http://misbakhun.com">
-            <span class="caption">
-              <span class="caption-content">
-                <h2>Misbakhun</h2>
-                <p class="mb-0">Sebuah website Portfolio</p>
-              </span>
-            </span>
-            <img class="img-fluid" src="img/portfolio/misbak.png" alt="">
-          </a>
-        </div>
-        <div class="col-lg-6">
-          <a class="portfolio-item" href="http:/new.gotoyotajogja.com">
-            <span class="caption">
-              <span class="caption-content">
-                <h2>Go Toyota Jogja</h2>
-                <p class="mb-0">Sebuah website Company Profile</p>
-              </span>
-            </span>
-            <img class="img-fluid" src="img/portfolio/toyota.png" alt="">
-          </a>
-        </div>
-        <div class="col-lg-6">
-          <a class="portfolio-item" href="http://wahdah.sch.id/">
-            <span class="caption">
-              <span class="caption-content">
-                <h2>wahdah.sch.id</h2>
-                <p class="mb-0">Sebuah website Pendidikan</p>
-              </span>
-            </span>
-            <img class="img-fluid" src="img/portfolio/wahda.png" alt="">
-          </a>
-        </div>
+        <div id="carousel_p" class="carousel slide" data-ride="carousel">
+          <!-- Carousel indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel_p" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel_p" data-slide-to="1"></li>
+            <li data-target="#carousel_p" data-slide-to="2"></li>
+          </ol>   
+          <!-- Wrapper for carousel items -->
+          <div class="carousel-inner mb-4">
+            <div class="item carousel-item active">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card" style="width: 100%;">
+                    <img src="https://nespetan.sirv.com/ppdb2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Web PPDB</h5>
+                      <p class="card-text">Website Penerimaan Peserta Didik Baru, website ini saya bangun menggunakan CI 3</p>
+                      <a href="https://ppdb.si-20.xyz/" target="_blank" class="btn btn-primary mr-3">Link</a>
+                      <a href="https://github.com/SkinnyCoders/myppdb" target="_blank" class="btn btn-primary"><i class="icon-social-github"></i> Github</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="card" style="width: 100%;">
+                    <img src="https://nespetan.sirv.com/linen.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pengolahan Linen</h5>
+                      <p class="card-text">Sistem Informasi Untuk memanajemen linen rumah sakit</p>
+                      <a href="http://linenrsiypdhi.com/" target="_blank" class="btn btn-primary mr-3">Link</a>
+                      <a href="https://github.com/SkinnyCoders/inv_linen" target="_blank" class="btn btn-primary"><i class="icon-social-github"></i>  Github</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item carousel-item">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card" style="width: 100%;">
+                    <img src="https://nespetan.sirv.com/smith.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">SMITH.id</h5>
+                      <p class="card-text">Smith merupakan sebuah website E-commerse yang saya bangun untuk menjual pakaian atau fashion.</p>
+                      <a href="http://smith.si-16.com" target="_blank" class="btn btn-primary mr-3">Link</a>
+                      <a href="#" target="_blank" class="btn btn-primary"><i class="icon-social-github"></i>  Github</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="card" style="width: 100%;">
+                    <img src="https://nespetan.sirv.com/wahda.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Wardah.sch.id</h5>
+                      <p class="card-text">Wardah adalah portal sekolah dasar yang saya bangun untuk menyampaikan informasi.</p>
+                      <a href="http://wahdah.sch.id/" target="_blank" class="btn btn-primary mr-3">Link</a>
+                      <a href="#" target="_blank" class="btn btn-primary"><i class="icon-social-github"></i>  Github</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item carousel-item">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card" style="width: 100%;">
+                    <img src="https://nespetan.sirv.com/toyota.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">GO Toyota Jogja</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="http:/new.gotoyotajogja.com" target="_blank" class="btn btn-primary mr-3">Link</a>
+                      <a href="#" target="_blank" class="btn btn-primary"><i class="icon-social-github"></i>  Github</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="card" style="width: 100%;">
+                    <img src="https://nespetan.sirv.com/misbak.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Web Profile Misbakhun</h5>
+                      <p class="card-text">Sebuah web profile yang saya buat untuk salah satu anggota partai golongan karya.</p>
+                      <a href="http://misbakhun.com" target="_blank" class="btn btn-primary mr-3">Link</a>
+                      <a href="#" target="_blank" class="btn btn-primary"><i class="icon-social-github"></i>  Github</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
   </section>
- -->
-  <!-- Call to Action -->
+
   <section id="contact" class="content-section">
     <div class="container text-center">
       <h2 class="mb-4">Contact Me! <i class="icon-phone"></i> </h2>
@@ -352,64 +465,131 @@
 
   <!-- Map -->
   <section class="map">
-    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.228937049682!2d110.35600981439595!3d-7.7655294791732885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a584334865e81%3A0x26dce8507c35aa12!2sGg.+Loncang+Kutuwates%2C+Kragilan%2C+Sinduadi%2C+Mlati%2C+Kabupaten+Sleman%2C+Daerah+Istimewa+Yogyakarta+55284!5e0!3m2!1sid!2sid!4v1550417790903" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15812.484204259856!2d110.36299356977537!3d-7.776987200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x33341261d91b74d6!2sruang%20kerja%20coffee%20%26%20collaboration!5e0!3m2!1sid!2sid!4v1596709638921!5m2!1sid!2sid" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     <br />
     <small>
       <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
     </small>
   </section>
 
-  <section class="process py-5" id="testimoni"  style="background-color: #eaeaea;">
-    <div class="container py-md-3">
-        <h3 class="heading mb-5">Apa Kata Alumni kami</h3>
-        <div class="section_header">
-        <div class="row">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Carousel indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>   
-        <!-- Wrapper for carousel items -->
-        <div class="carousel-inner">
-          <div class="item carousel-item <?=$class?>">
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="media">
-                  <div class="media-left d-flex mr-3">
-                    <a href="#">
-                      <img src="<?=base_url()?>assets/img/user" alt="">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <div class="testimonial">
-                      <p>Bambang</p>
-                      <p class="overview"><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</b>  Alumni </p>
+  <section class="content-section" id="testimonial">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>What My Clients Say</h2>
+          <div class="row">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>   
+            <!-- Wrapper for carousel items -->
+            <div class="carousel-inner">
+              <div class="item carousel-item active">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="media">
+                      <div class="media-left d-flex mr-3">
+                        <a href="#">
+                          <img src="https://nespetan.sirv.com/IMG_20180723_173400_628%20-%20Ririn%20Oktaverina.jpg" alt="">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <div class="testimonial">
+                          <h3 class="text-left" style="font-size: 2rem;">Ririn Oktaverina</h3>
+                          <p class="text-left" style="font-size: 18px;"><b>Dalam mengerjakan project cepat, dan hasil yang diberikan pun memuaskan</b> <!-- <br><br><i><b>Mahasiswi</b></i> -->
+                          <br><br>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star"></span>
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </div>      
               </div>
-            </div>      
+
+              <div class="item carousel-item">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="media">
+                      <div class="media-left d-flex mr-3">
+                        <a href="#">
+                          <img src="https://nespetan.sirv.com/adit.jpg" alt="">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <div class="testimonial">
+                          <h3 class="text-left" style="font-size: 2rem;">Aditya</h3>
+                          <p class="text-left" style="font-size: 18px;"><b>Genius web development and introved person - just no body.  He have a girl friend. He's in love with her. They went to college with me. And stay healthy.</b>
+                            <br><br>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>      
+              </div>
+
+              <div class="item carousel-item">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="media">
+                      <div class="media-left d-flex mr-3">
+                        <a href="#">
+                          <img src="https://nespetan.sirv.com/warsito.jpg" alt="">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <div class="testimonial">
+                          <h3 class="text-left" style="font-size: 2rem;">Bambang</h3>
+                          
+                          <p class="text-left" style="font-size: 18px;"><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</b>
+                          <br><br>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star"></span>
+
+                        </p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>      
+              </div>
+            </div>
           </div>
         </div>
-      </div>
         </div>
-        
+      </div>
+      
     </div>
-</section>
+  </section>
 
   <!-- Footer -->
-  <footer class="footer text-center">
+  <footer class="footer text-center bg-light">
     <div class="container">
       <ul class="list-inline mb-5">
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#">
+          <a class="social-link rounded-circle text-white mr-3" href="https://www.facebook.com/people/Rizki-Pratama-Putra/100007080908449">
             <i class="icon-social-facebook"></i>
           </a>
         </li>
@@ -429,7 +609,7 @@
           </a>
         </li>
       </ul>
-      <p class="text-muted small mb-0">Copyright &copy; Skinny Coders 2019</p>
+      <p class="text-muted small mb-0">Copyright &copy; Skinny Coders 2020</p>
     </div>
   </footer>
 
@@ -452,6 +632,176 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script>
+var ctx_php = document.getElementById('myChart').getContext('2d');
+var ctx_js = document.getElementById('chart_js').getContext('2d');
+var ctx_ci = document.getElementById('chart_ci').getContext('2d');
+var ctx_sql = document.getElementById('chart_sql').getContext('2d');
+var ctx_py = document.getElementById('chart_py').getContext('2d');
+var ctx_go = document.getElementById('chart_go').getContext('2d');
+
+var options_web = {
+    responsive: true,
+    title: {
+      display: true,
+      position: "top",
+      text: "Web Development",
+      fontSize: 20,
+      fontColor: "#111"
+    },
+    legend: {
+      display: true,
+      position: "bottom",
+      labels: {
+        fontColor: "#333",
+        fontSize: 16
+      }
+    }
+  };
+
+  var options = {
+    responsive: true,
+    title: {
+      display: true,
+      position: "top",
+      text: "Back-End",
+      fontSize: 20,
+      fontColor: "#111"
+    },
+    legend: {
+      display: true,
+      position: "bottom",
+      labels: {
+        fontColor: "#333",
+        fontSize: 16
+      }
+    }
+  };
+
+   //doughnut chart data
+  var data2 = {
+    labels: ["PHP"],
+    datasets: [
+      {
+        label: "TeamB Score",
+        data: [80, 20],
+        backgroundColor: [
+          "#0066CC",
+          "#eee"
+        ]
+      }
+    ]
+  };
+
+  var data3 = {
+    labels: ["JavaScript"],
+    datasets: [
+      {
+        label: "TeamB Score",
+        data: [65, 35],
+        backgroundColor: [
+          "#ffe700",
+          "#eee"
+        ]
+      }
+    ]
+  };
+
+  var data4 = {
+    labels: ["Codeigniter"],
+    datasets: [
+      {
+        label: "TeamB Score",
+        data: [80, 20],
+        backgroundColor: [
+          "#ff8100",
+          "#eee"
+        ]
+      }
+    ]
+  };
+
+  var data5 = {
+    labels: ["SQL"],
+    datasets: [
+      {
+        label: "TeamB Score",
+        data: [75, 25],
+        backgroundColor: [
+          "#11ce00",
+          "#eee"
+        ]
+      }
+    ]
+  };
+
+  var data6 = {
+    labels: ["Python"],
+    datasets: [
+      {
+        label: "TeamB Score",
+        data: [60, 40],
+        backgroundColor: [
+          "#0066CC",
+          "#eee"
+        ]
+      }
+    ]
+  };
+
+  var data7 = {
+    labels: ["Go"],
+    datasets: [
+      {
+        label: "TeamB Score",
+        data: [55, 45],
+        backgroundColor: [
+          "#0066CC",
+          "#eee"
+        ]
+      }
+    ]
+  };
+
+
+var myChart = new Chart(ctx_php, {
+    type: 'doughnut',
+    data: data2,
+    options: options_web
+});
+
+var myChart2 = new Chart(ctx_js, {
+    type: 'doughnut',
+    data: data3,
+    options: options_web
+});
+
+var myChart3 = new Chart(ctx_ci, {
+    type: 'doughnut',
+    data: data4,
+    options: options_web
+});
+
+var myChart4 = new Chart(ctx_sql, {
+    type: 'doughnut',
+    data: data5,
+    options: options_web
+});
+
+var myChart5 = new Chart(ctx_py, {
+    type: 'doughnut',
+    data: data6,
+    options: options
+});
+
+var myChart6 = new Chart(ctx_go, {
+    type: 'doughnut',
+    data: data7,
+    options: options
+});
+</script>
 
 </body>
 
