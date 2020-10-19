@@ -298,11 +298,14 @@ ul.timeline > li:before {
         </div>
       </div>
       <div class="row mt-5">
-        <div class="col-md-3 offset-md-3">
+        <div class="col-md-3 offset-md-1">
           <canvas id="chart_py" width="200" height="200"></canvas>
         </div>
         <div class="col-md-3">
           <canvas id="chart_go" width="200" height="200"></canvas>
+        </div>
+        <div class="col-md-3">
+          <canvas id="chart_java" width="200" height="200"></canvas>
         </div>
        <!--  <div class="col-md-3">
           <canvas id="chart_js" width="200" height="200"></canvas>
@@ -636,6 +639,7 @@ var ctx_ci = document.getElementById('chart_ci').getContext('2d');
 var ctx_sql = document.getElementById('chart_sql').getContext('2d');
 var ctx_py = document.getElementById('chart_py').getContext('2d');
 var ctx_go = document.getElementById('chart_go').getContext('2d');
+var ctx_java = document.getElementById('chart_java').getContext('2d');
 
 var options_web = {
     responsive: true,
@@ -760,6 +764,20 @@ var options_web = {
     ]
   };
 
+  var data8 = {
+    labels: ["Java"],
+    datasets: [
+      {
+        label: "TeamB Score",
+        data: [57, 43],
+        backgroundColor: [
+          "#0066CC",
+          "#eee"
+        ]
+      }
+    ]
+  };
+
 
 var myChart = new Chart(ctx_php, {
     type: 'doughnut',
@@ -794,6 +812,12 @@ var myChart5 = new Chart(ctx_py, {
 var myChart6 = new Chart(ctx_go, {
     type: 'doughnut',
     data: data7,
+    options: options
+});
+
+var myChart7 = new Chart(ctx_java, {
+    type: 'doughnut',
+    data: data8,
     options: options
 });
 </script>
